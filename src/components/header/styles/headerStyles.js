@@ -2,15 +2,17 @@ import { makeStyles } from "@material-ui/core";
 
 export default makeStyles((theme)=>({
     header:{
-        backgroundColor:"black"
+        display: "flex",
+        justifyContent: "space-between"
     },
     toolbar:{
-        backgroundColor: "teal",
+        backgroundColor: "teal", 
         display:"flex",
-        justifyItems:"space-evenly"
+        justifyContent:"space-between"
     },
     title:{
         display:"flex",
+        alignItems:"center",
         justifyContent:"space-between"
     },
     exceptTitle:{

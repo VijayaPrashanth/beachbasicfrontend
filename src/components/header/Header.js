@@ -20,7 +20,12 @@ const Header = () => {
                             <Person2 />
                         </div>
                     </div>
-
+                    {/* <div data-testid="welcome_text">
+                        Welcome User!
+                    </div>
+                    <div data-testid="user_icon">
+                        <Person2 />
+                    </div> */}
                 </Toolbar>
             </AppBar>
         </>
