@@ -4,9 +4,18 @@ export default makeStyles((theme)=>({
     header:{
         backgroundColor:"black"
     },
+    toolbar:{
+        backgroundColor: "teal",
+        display:"flex",
+        justifyItems:"space-evenly"
+    },
     title:{
-        backgroundColor:"teal",
-        display:"flex"
+        display:"flex",
+        justifyContent:"space-between"
+    },
+    exceptTitle:{
+        display:"flex",
+        justifyContent:"space-between"
     },
     titletext:{
         color:"white"
