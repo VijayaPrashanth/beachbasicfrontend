@@ -2,8 +2,8 @@ import { makeStyles } from "@material-ui/core";
 
 export default makeStyles((theme)=>({
     header:{
-        display: "flex",
-        justifyContent: "space-between"
+        //display: "flex",
+        // justifyContent: "space-between"
     },
     toolbar:{
         backgroundColor: "teal", 
@@ -13,10 +13,6 @@ export default makeStyles((theme)=>({
     title:{
         display:"flex",
         alignItems:"center",
-        justifyContent:"space-between"
-    },
-    exceptTitle:{
-        display:"flex",
         justifyContent:"space-between"
     },
     titletext:{
