@@ -31,22 +31,13 @@ export const login =async(username,password)=>{
     }
     let response
     try {
-        response=await axios.get(`http://localhost:8080/login`, config)
-        // .then(
-        //     (res) =>{ 
-        //         if(res.status===200) {
-        //             localStorage.setItem(tokenKey, token);
-        //             localStorage.setItem(userKey, username);
-        //         }
-        //     }
-        // );
+        response=await axios.get(`http://localhost:8080/login`, config);
     } catch (error) {
         console.log(error.response.status);
     }
     
     console.log("response data : "+response.data);
-    // console.log("status : "+response.status);
-    // const user = response.data;
+    
     if(response.data !== null)
     {
         localStorage.setItem(tokenKey,token);
