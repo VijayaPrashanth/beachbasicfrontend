@@ -8,7 +8,7 @@ export const authHeader=()=> {
     if(localStorage.getItem(tokenKey)) {
         return {
             headers:{
-                Authentication: 'Basic ' + localStorage.getItem(tokenKey)
+                Authorization: 'Basic '+localStorage.getItem(tokenKey)
             }
         }
     }
@@ -31,13 +31,13 @@ export const login =async(username,password)=>{
     }
     let response
     try {
-        response=await axios.get(`http://localhost:8080/login`, config);
+        response=await axios.get(`http://localhost:8080/login`, config).catch((err)=>{console.log("print error:");console.log({err}.response)});
     } catch (error) {
-        console.log(error.response.status);
+        console.log("error:"+error);
     }
     
-    console.log("response data : "+response.data);
-    
+    console.log("response data : "+{response});
+
     if(response.data !== null)
     {
         localStorage.setItem(tokenKey,token);

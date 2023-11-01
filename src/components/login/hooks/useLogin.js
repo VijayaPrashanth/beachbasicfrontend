@@ -8,7 +8,8 @@ export default(onLogin)=>{
 
     const handleError=()=>{
         if(errorResponse) {
-            <Typography variant="h5" color="red">
+            console.log("error : login failed");
+            <Typography variant="body1" color="error" style={{marginTop:"8px"}}>
                 Login failed
             </Typography>
         }
@@ -23,8 +24,12 @@ export default(onLogin)=>{
             setErrorResponse(false);
         }
         catch (error){
-            if(error.response && error.response === 401){
+            console.log("before error : "+errorResponse);
+            console.log("error status before error : "+error.response);
+            if(error && error.response === 401){
+                console.log(errorResponse);
                 setErrorResponse(true);
+                handleError();
             }
             else{
                 throw error;

@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 export default makeStyles((theme)=>({
     containerDisplay:{
-        marginTop:100
+        marginTop:100,
+        boxShadow: 8,
     }
 }))
